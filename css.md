@@ -55,3 +55,7 @@ The height and width of the shadow is determined by the height and width of the 
 * an optional blurRadius value for the box-shadow property:
 box-shadow: offsetX offsetY blurRadius color;
 If a blurRadius value isn't included, it defaults to 0 and produces sharp edges. The higher the value of blurRadius, the greater the blurring effect is.
+
+* The vh unit stands for viewport height, and is equal to 1% of the height of the viewport. This makes it relative to the viewport height.
+
+* (!!)Now, get rid of the horizontal scroll-bar, by setting the body default margin added by some browsers to 0.
