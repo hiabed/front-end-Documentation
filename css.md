@@ -59,3 +59,16 @@ If a blurRadius value isn't included, it defaults to 0 and produces sharp edges.
 * The vh unit stands for viewport height, and is equal to 1% of the height of the viewport. This makes it relative to the viewport height.
 
 * (!!)Now, get rid of the horizontal scroll-bar, by setting the body default margin added by some browsers to 0.
+
+* (!!) That is better. Now, make the background easy on the eyes, by changing the body background-color to #1b1b32. Then, to see the text, change the color to #f5f6f7.
+
+* The rem unit stands for root em, and is relative to the font size of the html element.
+
+* Nest an input element within each label. Be sure to add each input after the label text, and include a space after the colon.
+
+==>   <fieldset>
+        <label>Enter Your First Name:<input></label>
+        <label>Enter Your Last Name:<input></label>
+        <label>Enter Your Email:<input></label>
+        <label>Create a New Password:<input></label>
+      </fieldset>
