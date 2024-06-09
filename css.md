@@ -56,19 +56,31 @@ The height and width of the shadow is determined by the height and width of the 
 box-shadow: offsetX offsetY blurRadius color;
 If a blurRadius value isn't included, it defaults to 0 and produces sharp edges. The higher the value of blurRadius, the greater the blurring effect is.
 
-* The vh unit stands for viewport height, and is equal to 1% of the height of the viewport. This makes it relative to the viewport height.
+* The border of the last fieldset element looks a little out of place. You can select the last element of a specific type using the last-of-type CSS pseudo-class, like this:
 
-* (!!)Now, get rid of the horizontal scroll-bar, by setting the body default margin added by some browsers to 0.
+== > p:last-of-type { }
 
-* (!!) That is better. Now, make the background easy on the eyes, by changing the body background-color to #1b1b32. Then, to see the text, change the color to #f5f6f7.
+* Select only the .inline elements, and give them width of unset. This will remove the earlier rule which set all the input elements to width: 100%.
 
-* The rem unit stands for root em, and is relative to the font size of the html element.
+==> .inline {
+  width: unset;
+}
 
-* Nest an input element within each label. Be sure to add each input after the label text, and include a space after the colon.
+* If you look close enough, you will notice the .inline elements are too high on the line.
+To combat this, set the vertical-align property to middle.
 
-==>   <fieldset>
-        <label>Enter Your First Name:<input></label>
-        <label>Enter Your Last Name:<input></label>
-        <label>Enter Your Email:<input></label>
-        <label>Create a New Password:<input></label>
-      </fieldset>
+* Currently, if you type in the input or textarea elements, you will not be able to see the text. Also, their height is too small to be easy to use.
+Fix this, by setting the color to #ffffff, and setting their min-height to 2em.
+
+* (!!)To style the submit button, you can use an attribute selector, which selects an element based on the given attribute value. Here is an example:
+input[name="password"]
+
+==> input[type=submit] {
+  display: block;
+  width: 60%;
+}
+
+* To make the submit button appear more distinct, give it a background-color of #3b3b4f, and a border-color of white.
+
+* Most browsers inject their own default CSS properties and values for different elements. If you look closely, you might be able to notice the file input is smaller than the other text input elements. By default, a padding of 1px 2px is given to input elements you can type in.
+Using another attribute selector, style the input with a type of file to be the same padding as the other input elements.
